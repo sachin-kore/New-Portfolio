@@ -67,9 +67,9 @@ const Navbar = () => {
               aria-label="Toggle theme"
             >
               {theme === 'dark' ? (
-                <Sun className="w-5 h-5" />
+                <Sun className="w-5 h-5 text-white" />
               ) : (
-                <Moon className="w-5 h-5" />
+                <Moon className="w-5 h-5 " />
               )}
             </button>
           </div>
@@ -81,9 +81,9 @@ const Navbar = () => {
               className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
             >
               {isOpen ? (
-                <X className="w-6 h-6" />
+                <X className={`w-6 h-6 ${dark ? 'text-white' : ''}`} />
               ) : (
-                <Menu className="w-6 h-6" />
+                <Menu className={`w-6 h-6 ${dark ? 'text-white' : ''}`} />
               )}
             </button>
           </div>
@@ -93,27 +93,55 @@ const Navbar = () => {
       {/* Mobile Menu */}
 
       <div className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <a href="#home" className="mobile-nav-link">
+        <div className=" flex flex-col px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="#home"
+            className={` ${
+              dark ? 'text-gray-200 hover:text-purple-600' : 'text-gray-700'
+            }  dark:hover:text-purple-400 transition-colors block px-3 py-2 text-base font-medium`}
+            // className=" block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-600 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+          >
             Home
           </a>
-          <a href="#projects" className="mobile-nav-link">
+          <a
+            href="#projects"
+            className={` ${
+              dark ? 'text-gray-200 hover:text-purple-600' : 'text-gray-700'
+            }  dark:hover:text-purple-400 transition-colors block px-3 py-2 text-base font-medium`}
+          >
             Projects
           </a>
-          <a href="#skills" className="mobile-nav-link">
+          <a
+            href="#skills"
+            className={` ${
+              dark ? 'text-gray-200 hover:text-purple-600' : 'text-gray-700'
+            }  dark:hover:text-purple-400 transition-colors block px-3 py-2 text-base font-medium`}
+          >
             Skills
           </a>
-          <a href="#about" className="mobile-nav-link">
+          <a
+            href="#about"
+            className={` ${
+              dark ? 'text-gray-200 hover:text-purple-600' : 'text-gray-700'
+            }  dark:hover:text-purple-400 transition-colors block px-3 py-2 text-base font-medium`}
+          >
             About
           </a>
-          <a href="#contact" className="mobile-nav-link">
+          <a
+            href="#contact"
+            className={` ${
+              dark ? 'text-gray-200 hover:text-purple-600' : 'text-gray-700'
+            }  dark:hover:text-purple-400 transition-colors block px-3 py-2 text-base font-medium`}
+          >
             Contact
           </a>
           <button
             onClick={toggleTheme}
-            className="w-full text-left px-3 py-2 mobile-nav-link"
+            className={` ${
+              dark ? 'text-gray-200 hover:text-purple-600' : 'text-gray-700'
+            }  dark:hover:text-purple-400 transition-colors text-left px-3 py-2`}
           >
-            Dark
+            {dark ? 'Light' : 'Dark'}
           </button>
         </div>
       </div>

@@ -42,13 +42,19 @@ const Banner = () => {
           </div>
           <div className="flex gap-4">
             <a href="https://github.com" className="social-link">
-              <Github className="w-6 h-6" />
+              <Github
+                className={`w-6 h-6 ${dark ? 'text-white' : 'text-black'}`}
+              />
             </a>
             <a href="https://linkedin.com" className="social-link">
-              <Linkedin className="w-6 h-6" />
+              <Linkedin
+                className={`w-6 h-6 ${dark ? 'text-white' : 'text-black'}`}
+              />
             </a>
             <a href="/resume.pdf" className="social-link">
-              <FileText className="w-6 h-6" />
+              <FileText
+                className={`w-6 h-6 ${dark ? 'text-white' : 'text-black'}`}
+              />
             </a>
           </div>
         </div>
