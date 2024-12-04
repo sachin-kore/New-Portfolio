@@ -1,5 +1,6 @@
 import { FileText, Github, Linkedin } from 'lucide-react'
 import { useTheme } from '../Utils/ThemeContext'
+import Resume from '../assets/docs/Sachin-Resume-2024.pdf'
 
 const Banner = () => {
   const { theme } = useTheme()
@@ -34,7 +35,8 @@ const Banner = () => {
               Contact Me
             </a>
             <a
-              href="/resume.pdf"
+              href={Resume}
+              download="sachin-resume.pdf"
               className="px-6 py-3 border-2 border-purple-600 text-purple-600 dark:text-purple-400 rounded-lg hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors"
             >
               Download CV
